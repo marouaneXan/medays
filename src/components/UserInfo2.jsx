@@ -254,26 +254,54 @@ const UserInfo2 = () => {
   ];
   return (
     <>
-      <div className="d-flex" style={{ width: "280px" }}>
-        <span className="p-float-label mt-4 mb-3">
-          <Dropdown
-            optionLabel="name"
-            value={city}
-            options={cities}
-            onChange={(e) => setCity(e.value)}
-            placeholder="Sélectionnez une ville"
-          />
-          <label htmlFor="nationalite">Pays de résidence</label>
-        </span>
+      <span className="p-float-label mt-4 mb-3">
+        <Dropdown
+          optionLabel="name"
+          value={city}
+          options={cities}
+          onChange={(e) => setCity(e.value)}
+          placeholder="Sélectionnez une ville"
+        />
+        <label htmlFor="nationalite">Pays de résidence</label>
+      </span>
       <span className="p-float-label mt-4 mb-3">
         <InputText
-          id="prenom"
+          id="ville"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <label htmlFor="prenom">Prenom</label>
+        <label htmlFor="ville">Ville</label>
       </span>
-        <div className="col">
+      <span className="p-float-label mt-4 mb-3">
+        <InputText
+          id="email"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <label htmlFor="email">Email</label>
+      </span>
+      <span className="p-float-label mt-4 mb-3">
+        <InputText
+          id="telephone-pro"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <label htmlFor="telephone-pro">Téléphone professionnel</label>
+      </span>
+      <span className="p-float-label mt-4 mb-3">
+        <InputText
+          type="number"
+          id="telephone"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+        <label htmlFor="telephone">Téléphone mobile</label>
+      </span>
+      <div className="d-flex">
+        <div className="col-3">
+          <p style={{ fontWeight: "bold",fontSize:'14px',color:'#050f00' }}>Pièce d’idenité</p>
+        </div>
+        <div className="col-5">
           <RadioButton
             value="Madame"
             name="madame"
@@ -282,7 +310,7 @@ const UserInfo2 = () => {
             id="madame"
           />
           <label htmlFor="madame" className="ml-2">
-            Madame
+            CIN (Résidents marocains)
           </label>
         </div>
         <div className="col">
@@ -294,36 +322,18 @@ const UserInfo2 = () => {
             id="monsieur"
           />
           <label htmlFor="monsieur" className="ml-2">
-            Monsieur
+            Passeport
           </label>
         </div>
       </div>
-      <span className="p-float-label mt-4 mb-3">
+      <span className="p-float-label mt-2 mb-4">
         <InputText
-          id="nom"
+        type="number"
+          id="indentite"
           value={value}
           onChange={(e) => setValue(e.target.value)}
         />
-        <label htmlFor="nom">Nom</label>
-      </span>
-      <span className="p-float-label mt-4 mb-3">
-        <InputText
-          id="organisme"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <label htmlFor="organisme">Organisme</label>
-      </span>
-      <span className="p-float-label mt-4 mb-3">
-        <InputText
-          id="fonction"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        <label htmlFor="fonction">Fonction</label>
-      </span>
-      <span className="p-float-label mt-4 mb-3">
-        <Calendar value={date} onChange={(e) => setDate(e.value)}></Calendar>
+        <label htmlFor="indentite">Numéro de la pièce d'identité</label>
       </span>
     </>
   );
