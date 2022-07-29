@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
-import { Calendar } from "primereact/calendar";
+import { useState } from "react";
 import { RadioButton } from "primereact/radiobutton";
 import { InputText } from "primereact/inputtext";
 import { Dropdown } from "primereact/dropdown";
 const UserInfo2 = () => {
   const [value, setValue] = useState();
   const [city, setCity] = useState();
-  const [date, setDate] = useState();
   const cities = [
     { name: "Afghanistan", code: "AF" },
     { name: "Åland Islands", code: "AX" },
