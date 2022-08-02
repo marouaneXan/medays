@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import NotFound from "./pages/NotFound";
 import Steptow from "./pages/Steptow";
 import Home from "./pages/Home";
@@ -9,7 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { useTranslation } from 'react-i18next';
 function App() {
   return (
-    <>
+    <Suspense fullback={null}>
       <Router>
         <Navbar />
         <div className="container">
@@ -21,7 +22,7 @@ function App() {
         </div>
         <Footer />
       </Router>
-    </>
+    </Suspense>
   );
 }
 
