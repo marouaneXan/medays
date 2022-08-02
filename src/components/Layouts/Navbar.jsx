@@ -24,10 +24,10 @@ const Navbar = () => {
 
             <div className="btn">
               <a className="btn btn-outline-dark ms-2">
-                <i className="fa fa-sign-in me-1" aria-hidden="true"></i>Login
+                <i className="fa fa-sign-in me-1" aria-hidden="true"></i>Fr
               </a>
               <a className="btn btn-outline-dark ms-2">
-                <i className="fa fa-user-plus me-1"></i>Register
+                <i className="fa fa-user-plus me-1"></i>En
               </a>
               <button className="btn ms-2">
                 <i
